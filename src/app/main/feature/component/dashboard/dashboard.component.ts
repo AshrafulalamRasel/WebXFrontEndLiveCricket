@@ -35,5 +35,16 @@ export class DashboardComponent implements OnInit {
     });
   }
 
+  onKey(newValue: any){
+    this.liveScoreModelList = [];
+    this.userService.getLiveScoreSearchListData(0, newValue.target.value).subscribe(res => {
+      this.liveScoreModelList.push(res);
+      res.scoreResponseList.forEach((itemList: any) => {
+        console.log(itemList);
+        this.liveScoreModelList.push(itemList);
+      });
+    });
+  }
+
 
 }

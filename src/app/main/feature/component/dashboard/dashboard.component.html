@@ -42,7 +42,7 @@
 
 <h2>Live Cricket Score</h2>
 
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search .." title="Type in a name">
+<input type="text" id="myInput" (keyup)="onKey($event)" placeholder="Search .." title="Type in a name">
 
 <table id="myTable">
   <tr class="header">
@@ -57,7 +57,7 @@
 
 </table>
 
-
+<!--
 
 <script type="text/javascript">
 
@@ -80,6 +80,6 @@
       }
     }
   }
-</script>
+</script>-->
 </body>
 </html>
